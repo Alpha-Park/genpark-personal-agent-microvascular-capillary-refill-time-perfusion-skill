@@ -1,0 +1,25 @@
+{
+  "name": "genpark-personal-agent-microvascular-capillary-refill-time-perfusion-skill",
+  "version": "1.0.0",
+  "description": "Calculates Anderson temperature-normalized Capillary Refill Time (CRT), peripheral vasomotor tone, and Combined Microvascular Shock Score (CMSS).",
+  "tools": [
+    {
+      "name": "evaluate_capillary_refill_time",
+      "description": "Calculates temperature-normalized Capillary Refill Time (CRT) and perfusion tier.",
+      "parameters": {
+        "measured_crt_seconds": "float (default 1.8)",
+        "ambient_temperature_celsius": "float (default 21.0)",
+        "skin_site": "string (default 'fingertip_index')"
+      }
+    },
+    {
+      "name": "calculate_peripheral_shock_index",
+      "description": "Calculates Shock Index (HR / SBP) and Combined Microvascular Shock Score (CMSS).",
+      "parameters": {
+        "systolic_bp": "float (default 120.0)",
+        "heart_rate_bpm": "float (default 72.0)",
+        "normalized_crt_seconds": "float (default 1.8)"
+      }
+    }
+  ]
+}
